@@ -25,7 +25,7 @@ The notebooks are the spine. Run them in order. Come back here for the consolida
 
 ## Overview
 
-Sarah's L01 model said "60% positive" — but that was a single number computed from one batch of 10,000 reviews. Priya's question, *how sure are we?*, is the question that probability and statistics exist to answer. By Friday Sarah will hold three new tools: **distributions** (to read the shape of any column of data), **confidence intervals** (to put an honest range around any number she reports), and **hypothesis testing with p-values** (to decide whether an intervention actually changed anything, or whether the apparent difference is just noise — with A/B testing as the worked example). Every model evaluation, every business experiment, every dashboard number for the rest of the course is read through these three lenses.
+Sarah's L01 model said "60% positive" — but that was a single number computed from one batch of 10,000 reviews. Priya's question, *how sure are we?*, is the question that probability and statistics exist to answer. By Friday Sarah will hold three new tools: **distributions** (to read the shape of any column of data), **confidence intervals** (to put an honest range around any number she reports), and **hypothesis testing with p-values and effect size** (to decide whether an intervention actually changed anything, or whether the apparent difference is just noise — with A/B testing as the worked example). Every model evaluation, every business experiment, every dashboard number for the rest of the course is read through these three lenses.
 
 ---
 
@@ -94,6 +94,10 @@ Work through these after finishing the three Part notebooks. Attempt each questi
 **Q8 — p-value quiz.** An A/B test produces p = 0.001. A colleague says "this is very statistically significant, so we should definitely roll out the change." What question should you ask before agreeing?
 
 > **Sample answer:** "What is the actual size of the effect?" A p-value of 0.001 with a very large sample might correspond to a 0.01% difference in conversion rate — statistically rock-solid but practically worthless. Before rolling out, ask: how large was the measured improvement? Does it justify the development cost and any risks of the change? Statistical significance does not imply business significance.
+
+**Q8b — Effect size check.** Two experiments both produce p < 0.05. Experiment A improves conversion from 10.0% to 10.1%. Experiment B improves conversion from 10.0% to 12.5%. Why is it misleading to treat these two results as equally important?
+
+> **Sample answer:** Because statistical significance only tells us the difference is unlikely to be due to chance alone. It does not tell us whether the difference is large enough to matter. Experiment A shows a tiny effect that may be too small to justify action, while Experiment B shows a much larger effect that is more likely to matter in practice. This is why every p-value should be read together with an effect size.
 
 **Q9 — Mis-reading check.** An experiment produces p = 0.12. Your manager says "the null hypothesis is confirmed — there's no effect." Correct their interpretation.
 
